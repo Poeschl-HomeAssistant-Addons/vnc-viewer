@@ -5,7 +5,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     git=1:2.39.5-0+deb12u1
 
 RUN git config --global advice.detachedHead false && \
-    git clone https://github.com/novnc/noVNC.git -b v1.3.0 /noVNC
+    git clone https://github.com/novnc/noVNC.git -b v1.5.0 /noVNC
 
 FROM $BUILD_FROM AS WEBSOCKIFY
 
