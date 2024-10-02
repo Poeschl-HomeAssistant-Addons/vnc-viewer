@@ -15,7 +15,6 @@ arch:
   - i386
 boot: manual
 hassio_api: true
-image: ghcr.io/poeschl-homeassistant-addons/vnc-viewer-{arch}
 init: false
 options:
   vnc_server_host: localhost
