@@ -2,7 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM AS NO_VNC
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
-    git=1:2.39.5-0+deb12u1
+    git=1:2.39.5-0+deb12u2
 
 RUN git config --global advice.detachedHead false && \
     git clone https://github.com/novnc/noVNC.git -b v1.5.0 /noVNC
@@ -10,7 +10,7 @@ RUN git config --global advice.detachedHead false && \
 FROM $BUILD_FROM AS WEBSOCKIFY
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
-    git=1:2.39.5-0+deb12u1 \
+    git=1:2.39.5-0+deb12u2 \
     python3=3.11.2-1+b1 \
     python3-setuptools=66.1.1-1 \
     python3-numpy=1:1.24.2-1+deb12u1 \
@@ -26,7 +26,7 @@ RUN git config --global advice.detachedHead false && \
 FROM $BUILD_FROM AS RUNNING
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
-    git=1:2.39.5-0+deb12u1 \
+    git=1:2.39.5-0+deb12u2 \
     python3=3.11.2-1+b1 \
     python3-setuptools=66.1.1-1 \
     python3-numpy=1:1.24.2-1+deb12u1 \
