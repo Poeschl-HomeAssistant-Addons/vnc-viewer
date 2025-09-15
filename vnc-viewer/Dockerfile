@@ -12,7 +12,7 @@ FROM $BUILD_FROM AS WEBSOCKIFY
 RUN apt-get update && apt-get -y --no-install-recommends install \
     git=1:2.39.5-0+deb12u1 \
     python3=3.11.2-1+b1 \
-    python3-setuptools=66.1.1-1 \
+    python3-setuptools=66.1.1-1+deb12u2 \
     python3-numpy=1:1.24.2-1+deb12u1 \
     python3-pip=23.0.1+dfsg-1
 
@@ -28,7 +28,7 @@ FROM $BUILD_FROM AS RUNNING
 RUN apt-get update && apt-get -y --no-install-recommends install \
     git=1:2.39.5-0+deb12u1 \
     python3=3.11.2-1+b1 \
-    python3-setuptools=66.1.1-1 \
+    python3-setuptools=66.1.1-1+deb12u2 \
     python3-numpy=1:1.24.2-1+deb12u1 \
     procps=2:4.0.2-3  \
     && apt-get clean \
